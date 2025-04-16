@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+html {
+    height: 100%;
+  }
+ 
+  
+  
+body{
+    background-color:  #51321d;
+    color: rgb(254, 220, 180);
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.main-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+
+#head{
+    height: 5rem;
+   line-height: 5rem;
+    font-size: 3rem; 
+    width: 100vw;
+    background-color: #271204 ;
+   
+}
+
+.msg-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#msg{
+    font-size: 3rem;
+}
+
+.hide{
+    display: none;
+}
+#newGame{
+    padding: 1rem;
+    font-size: 1.25rem;
+    font-weight:bold;
+    border-radius: 1rem;
+    color:#51321d;
+   background-color:  rgb(235, 195, 146);
+    border: none;
+    cursor: pointer;
+}
+
+#newGame:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+
+.main-board{
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+}
+
+.main-container{
+    height: 68vmin;
+    width:68vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  rgb(235, 195, 146);
+    margin-top: 2rem;
+    border-radius: 1vmin;
+    
+}
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.5rem;
+    width: 62vmin;
+    height: 62vmin;
+    background-color: #7c563b;
+    align-items: center;
+   justify-content: center;
+   border-radius: 1vmin;
+  }
+  
+.box{
+    height: 16vmin;
+    width: 16vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+    font-size: 14vmin;
+    background-color:  rgb(235, 195, 146);
+    margin-left: 1rem;
+    color: #7c563b;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    cursor: pointer; 
+    font-weight: bold;  
+   
+}
+.box:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+
+.play{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.score-board{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    gap: 8rem;
+    margin-bottom: 7rem;
+    
+}
+
+
+#o-score , #x-score{
+    font-size: 5rem;
+}
+
+
+#para{
+    background-color:  rgb(235, 195, 146);
+color: #51321d;
+font-weight: bold;
+margin-top: 2rem;
+border-radius: 7px;
+width: 40vmin;
+}
+
+
+#reset{
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+    color:#51321d;
+    font-weight: bold;
+   background-color:  rgb(235, 195, 146);
+    border: none;
+    cursor: pointer;
+}
+
+#reset:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Tablet (landscape)  */
+@media (max-width: 1024px) {
+    .main-board {
+      flex-direction: column;
+      gap: 3rem;
+    }
+  
+    .score-board {
+      gap: 4rem;
+      font-size: 2.5rem;
+    }
+  
+    #o-score,
+    #x-score {
+      font-size: 4rem;
+    }
+  
+    .main-container {
+      width: 80vmin;
+      height: 80vmin;
+    }
+  
+    .game {
+      width: 75vmin;
+      height: 75vmin;
+      gap :0.5rem;
+    }
+  
+    .box {
+      width: 20vmin;
+      height: 20vmin;
+      font-size: 10vmin;
+      margin-right: 1rem;
+    }
+  }
+  
+  
+  
+  /* Mobile Phones */
+  @media (max-width: 600px) {
+    #head {
+      font-size: 2rem;
+      height: 4rem;
+      line-height: 4rem;
+    }
+  
+    .score-board {
+
+      gap: 2rem;
+      margin-bottom: 3rem;
+      font-size: 2rem;
+    }
+  
+    #o-score,
+    #x-score {
+      font-size: 3rem;
+    }
+  .box {
+    width: 25vw;
+    height: 25vw;
+    font-size: 7vw;
+    margin-left:0.8rem; /* avoid extra space */
+  }
+
+  .game {
+    width: 90vw;
+    height: 90vw;
+    gap: 2vw;
+   
+  }
+
+  .main-container {
+    width: 95vw;
+    height: 95vw;
+  }
+
+  
+    #reset,
+    #newGame {
+      font-size: 1rem;
+      padding: 0.75rem;
+      width: 70%;
+      margin-bottom: 1rem;
+    }
+  
+    #msg {
+      font-size: 2rem;
+      padding: 1rem;
+    }
+  
+    #para {
+      font-size: 1rem;
+      width: 90%;
+    }
+}
+   
