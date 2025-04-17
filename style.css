@@ -76,34 +76,25 @@ body{
     gap: 8rem;
 }
 
-.main-container{
-    height: 68vmin;
-    width:68vmin;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color:  rgb(235, 195, 146);
-    margin-top: 2rem;
-    border-radius: 1vmin;
-    
-}
 .game {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 0.5rem;
     width: 62vmin;
     height: 62vmin;
     background-color: #7c563b;
     align-items: center;
-   justify-content: center;
-   border-radius: 1vmin;
+    justify-content: center;
+    border-radius: 1vmin;
+    border:  18px solid  rgb(235, 195, 146);
   }
   
 .box{
     height: 16vmin;
     width: 16vmin;
     border-radius: 1rem;
+    position: relative;
+    right: 8px;
     border: none;
     box-shadow: 0 0 1rem rgba(0,0,0,0.3);
     font-size: 14vmin;
@@ -117,11 +108,13 @@ body{
     font-weight: bold;  
    
 }
+
+
 .box:hover {
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
 }
-
+ 
 
 
 .play{
@@ -198,14 +191,14 @@ width: 40vmin;
     .game {
       width: 75vmin;
       height: 75vmin;
-      gap :0.5rem;
+      padding: 10px;
+      box-sizing: border-box;
     }
   
     .box {
       width: 20vmin;
       height: 20vmin;
       font-size: 10vmin;
-      margin-right: 1rem;
     }
   }
   
@@ -231,23 +224,18 @@ width: 40vmin;
       font-size: 3rem;
     }
   .box {
-    width: 25vw;
-    height: 25vw;
+    width: 22vw;
+    height: 22vw;
     font-size: 7vw;
-    margin-left:0.8rem; /* avoid extra space */
   }
 
   .game {
     width: 90vw;
-    height: 90vw;
-    gap: 2vw;
-   
+    height: 90vw;  
+    padding-right: 10px; 
   }
 
-  .main-container {
-    width: 95vw;
-    height: 95vw;
-  }
+
 
   
     #reset,
